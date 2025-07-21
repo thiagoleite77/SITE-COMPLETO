@@ -1,27 +1,23 @@
 <!doctype html>
 <html lang="pt-br">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
   <link rel="stylesheet" type ="text/css" href="css/seletores.css"> <!--a tag link, linka o html com o css-->
   <title EXEMPLO JAVASCRIPT></title>
-  
-
+</head>
 <body>
-
   <header>
     <nav>
-      <a href="#">INÍCIO</a>
-      <a href="#">FGTS</a>
-      <a href="#">FÉRIAS</a>
-      <a href="#">DÉCIMO</a>
+      <a href="#INICIO">INÍCIO</a>
+      <a href="#FGTS">FGTS</a>
+      <a href="#ferias">FÉRIAS</a>
+      <a href="#decimo">DÉCIMO</a>
     </nav>
-
-    <h3>TL PESSOAL</h3>
+    <h3>DEV THIAGO</h3>
     <h4>EXEMPLO DE PÁGINA JAVASCRIPT</h4>
   </header>
-
+<a href='#' id="INICIO"></a>
   <br>
   <br>
   <br>
@@ -32,19 +28,20 @@
     <button>Comprar!</button>
   </div> -->
 
-  <br><br>
-  
+
+  <br><br><br><br><br><br>
   <section class="container">
-    <h1>TL DEPARTAMENTO PESSOAL</h1>
-		<h2>Cursos de Informática e Tecnologia</h2>
+    <h1>Desenvolvedor : Thiago Leite </h1>
+		<h2>Sobre o projeto:</h2>
 		<p>Olá!</p>
 		<p>Vamos falar um pouco sobre o conteúdo a seguir.</p>
 		<p>Nesta página vamos abordar um exemplo de site com as tecnologias HTML, CSS e JavaScript.</p>
 		<p>O intuito da página é abordar com exemplos práticos o desenvolvimento de uma aplicação Web com as citadas tecnologias e não trabalhar de fato com departamento pessoal e áreas afins.</p>
 		<p>Em resumo essa página foi criada apenas a título de exemplo para alunos de cursos de desenvolvimento de sites e não deverá ser considerada como base para qualquer tipo de cálculo trabalhista.</p><br>
-
-
   </section>
+  <a href='#' id="FGTS"></a>
+
+
   <br>
   <section class="container">
     <br><br>
@@ -52,6 +49,35 @@
   <p>O que é: O FGTS é uma poupança aberta pela empresa em nome do trabalhador que funciona como uma garantia para protegê-lo em caso de demissão sem justa causa.</p> 
   <p>Os valores do FGTS pertencem exclusivamente ao trabalhador e, em algumas situações especiais, pode ser sacado sem que o trabalhador tenha deixado o emprego.</p>
   <h2>Cálculo</h2>
+  <br><br>
+    <label for="salario">Salário</label><br>
+    <input type="number" id="salario" placeholder="Insira o seu salário"> 
+    <br><br>
+    <label for="tempo">Tempo trabalhado (em meses)</label><br>
+    <input type="number" id="tempo" placeholder="Insira o número de meses">
+    <br><br>
+    <button onclick="fgts()">Calcular FGTS</button>
+    <a href='#' id="ferias"></a>
+    <br><br>
+    <p><b>O valor aproximado de FGTS no período é de: R$<span></span></b></p>
+    
+
+    <script type="text/javascript">
+      let salario = document.querySelector("#salario");
+      let tempo = document.querySelector("#tempo");
+      let resultado = document.querySelector('span');
+      ///resultado.innerHTML pega a variável resultado e coloca no HTML
+      /// ela calcula dentro do parenteses primeiro
+      /// .value singifica que ele puxa o valor que esta dentro da variábel
+      /// entao tempo.value irá receber o que esta dentro da variável tempo
+      /// parsefloat, converte para o tipo float
+
+      function fgts(){
+        resultado.innerHTML = parseFloat(salario.value/100*8)*tempo.value;
+      }                                                      
+
+    </script>
+    
   </section>
      
   <br>
@@ -62,78 +88,69 @@
     <H2>Férias</H2>
       <p>De acordo com a lei trabalhista, o funcionário que sai de férias tem o direito de receber a remuneração mensal adiantada mais um adicional, que equivale a um terço do pagamento.</p>
     <p>O valor total deve ser depositado na conta do funcionário até dois dias antes do início do período de descanso.</p>
+     <a href='#' id="decimo"></a>
     <h2>Cálculo</h2>
+    <br><br>
+    <a href="ferias.html" class="link">Clique para calcular</a>
+    <br><br><br>
 
   </section>
   <br>
   <br>
   <br>
+ 
   <section class="container">
     <br><br>
     <h2>Décimo</h2>
   <p>O décimo terceiro, também conhecido como gratificação de Natal, foi instituído no país em 1962. O direito ao trabalhador foi implementado no governo João Goulart, por meio da lei nº 4.090/1962.</p>
   <p>Como o nome sugere, ele é uma remuneração extra, que é paga no fim do ano.</p>
   <h2>Cálculo</h2>
+  <br><br>
+    <a href="decimo.html" class="link">Clique para Calcular</a>
+    <br><br><br>
   </section>
      
   <br>
   <br>
   <br>
-  <!---
-  <section class="container" id=grid-container>
-
+  
+  <section class="container" id="grid-container">
+    <h3>Clique para saber mais</h3>
     <div class="grid">
 
-      <div>Conteúdo 1</div>
-      <div>Conteúdo 2</div>
-      <div>Conteúdo 3</div>
-      <div>Conteúdo 4</div>
-      <div>Conteúdo 5</div>
-      <div>Conteúdo 6</div>
+      <div>
+        <h2>FGTS</h2>
+       <img src="img/fgts.png" alt="Imagem FGTS">
+      </div>
+
+      <div>
+        <h2>Férias</h2>
+       <a href="ferias.html"><img src="img/ferias.png" alt="Imagem férias"></a>
+      </div>
+
+      <div>
+        <h2>Décimo</h2>
+       <a href="decimo.html"><img src="img/decimo.png" alt="Imagem décimo"></a>
+      </div>
+
+      <div>
+        <h2>Investimentos</h2>
+        <a href="https://www.youtube.com/watch?v=qBgK1tRAPzA" target="_blank"><img src="img/investimentos.png" alt="Imagem investimentos"></a>
+      </div>
+
+      <div>
+        <h2>Renda Extra</h2>
+        <img src="img/renda-extra.png" alt="Imagem Renda Extra">
+      </div>
+
+      <div>
+        <h2>Serviços</h2>
+        <img src="img/servicos.png" alt="Imagem servicos">
+      </div>
 
     </div>
 
-
-
-  </section>
-  <br>b
-  <section class="container" id="formulario">
-
-    <h2 class="tlt">Selecione um produto para mais informações</h2>
-
-    <form action="#" method="get" target="_blank">
-      <p class="formulario-contato">
-        <label for="nome">Nome</label><br>
-        <input class="dados-formulario" type="text" id="nome" name="nome" placeholder="Insira seu nome">
-      </p>
-
-      <p class="formulario-contato">
-        <label for="contato">Contato</label><br>
-        <input class="dados-formulario" type="tel" id="tel" name="tel" placeholder="Insira seu whatsapp">
-      </p>
-
-      <p class="formulario-contato">
-        <input type="checkbox" id="office" name="office" value="cursos de office">
-        <label for="office">Quero saber mais sobre cursos de office</label><br>
-      </p>
-
-      <P class="formulario-contato">
-        <input type="checkbox" id="web" name="web" value="cursos de dev. web">
-        <label for="web">Quero saber mais sobre cursos de dev. web</label>
-
-      <P class="formulario-contato">
-        <input type="checkbox" id="Marketing" name="Marketing" value="cursos de Marketing">
-        <label for="Marketing">Quero saber mais sobre cursos de Marketing</label><br>
-      </p>
-
-      <p class="formulario-contato">
-        <input type="reset" value="LIMPAR">
-        <input type="submit" value="ENVIAR">
-      </p>
-
-    </form>
-
-  </section> -->
+  </section> 
 
   <br>
   <br>
