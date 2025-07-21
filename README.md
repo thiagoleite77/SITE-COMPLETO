@@ -1,7 +1,7 @@
 ﻿# Site para departamento RH
 
 
- ##O objetivo principal deste site é mostrar o uso das tecnologias **HTML**, **CSS** e **JavaScript** na construção de uma aplicação Web simples.
+ ## O objetivo principal deste site é mostrar o uso das tecnologias **HTML**, **CSS** e **JavaScript** na construção de uma aplicação Web simples.
 
 ---
 
