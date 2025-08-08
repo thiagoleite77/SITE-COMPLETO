@@ -1,6 +1,6 @@
 ﻿# Site para departamento RH
 
-  <img src="img/fgts.png" alt="Imagem FGTS">
+  <img src="img/Página-Inicial.png" alt="Imagem Página inicial">
 
 
  ## O objetivo principal deste site é mostrar o uso das tecnologias **HTML**, **CSS** e **JavaScript** na construção de uma aplicação Web simples.
@@ -37,5 +37,6 @@ A estrutura é dividida em seções:
 - **JavaScript Vanilla**
 
 ---
+
 
 
